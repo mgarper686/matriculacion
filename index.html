@@ -36,7 +36,43 @@ select{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);bo
 canvas{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);cursor:zoom-in}@media(max-width:820px){.cw{overflow-x:auto}canvas{min-width:720px}}
 .guia{margin-top:10px;background:var(--gb);border:1px solid var(--gl);border-radius:10px;padding:4px 16px 12px;font-size:15px;line-height:1.55}.guia h4{margin:14px 0 4px;color:var(--gf);font-size:15px}.guia ol{margin:4px 0;padding-left:22px}.guia li{margin:8px 0}.guia kbd{background:var(--card);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 6px;font:600 13px "Segoe UI",system-ui,sans-serif}a.dl.bml{background:#2d7a3a;color:#fff;cursor:grab}.guia a.dl.bml{margin:6px 0 0}.cp a.dl.bml{margin:0 0 0 6px;padding:3px 10px;font-size:13px}
 details.cp{margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--bg)}details.cp summary{cursor:pointer;font-weight:600;color:var(--ac)}.cp p{margin:6px 0 0}.cp table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}.cp td,.cp th{padding:5px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.cp button{margin-left:6px;padding:2px 9px;font:600 12px "Segoe UI",system-ui,sans-serif;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ac);cursor:pointer}.cp button:focus-visible,.cp summary:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
-dialog{border:0;border-radius:12px;padding:12px;max-width:96vw;background:var(--card);color:var(--fg)}dialog::backdrop{background:rgba(0,0,0,.6)}.big{overflow:auto;max-height:80vh;margin-top:8px}.big img{display:block;width:1200px;max-width:none}
+.vid{max-width:520px}.vid h3{margin:10px 0 6px;font-size:17px}.vid p{margin:8px 0}
+.vid kbd{background:var(--bg);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 6px;font:600 13px "Segoe UI",system-ui,sans-serif}
+.mk{position:relative;width:480px;max-width:100%;height:210px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;margin:10px 0;font:12px "Segoe UI",system-ui,sans-serif;color:#445}
+.mk-top{height:36px;background:#dfe3e8;display:flex;align-items:center;gap:6px;padding:0 10px}.mk-top i{width:10px;height:10px;border-radius:50%;background:#a9b1bb}
+.mk-url{margin-left:8px;flex:1;background:#fff;border-radius:99px;padding:3px 12px}
+.mk-bar{height:30px;background:#f1f3f4;border-bottom:1px solid #ccd3da;display:flex;align-items:center;gap:8px;padding:0 10px;animation:mkbar 8s infinite}
+.mk-bar b{font-weight:400;background:#e3e6ea;border-radius:4px;padding:2px 8px}.mk-bar b.mk-new{background:#2d7a3a;color:#fff;animation:mknw 8s infinite}
+.mk-page{position:absolute;top:66px;left:0;right:0;bottom:0}.mk-l{height:10px;background:#e8ebef;border-radius:4px;margin:16px 40px 0;width:60%}.mk-l.s{width:40%;margin-top:10px}
+.mk-btn,.mk-gh{position:absolute;background:#2d7a3a;color:#fff;font-weight:600;border-radius:999px;padding:5px 14px;white-space:nowrap}.mk-btn{left:40px;top:66px}
+.mk-gh{left:0;top:0;opacity:0;animation:mkgh 8s infinite}.mk-cur{position:absolute;left:0;top:0;animation:mkcur 8s infinite}
+@keyframes mkcur{0%{transform:translate(400px,185px)}22%,31%{transform:translate(120px,150px)}65%,74%{transform:translate(170px,50px)}92%,100%{transform:translate(400px,185px)}}
+@keyframes mkgh{0%,30%{opacity:0;transform:translate(40px,132px)}32%{opacity:.9;transform:translate(40px,132px)}65%,74%{opacity:.9;transform:translate(90px,38px)}76%,100%{opacity:0;transform:translate(90px,38px)}}
+@keyframes mknw{0%,74%{opacity:0}80%,94%{opacity:1}100%{opacity:0}}
+@keyframes mkbar{0%,36%{box-shadow:none}44%,72%{box-shadow:inset 0 0 0 2px #2d7a3a}80%,100%{box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.mk-bar,.mk-bar b.mk-new,.mk-cur,.mk-gh{animation:none}.mk-cur,.mk-gh{display:none}}
+.keys{margin:8px 0}.keys kbd{font-size:18px;padding:4px 14px;animation:mkk 8s infinite}.keys kbd:nth-of-type(2){animation-delay:0s}
+.mk3{height:170px}.mk-b2{overflow:hidden;background:#f1f3f4;border-bottom:1px solid #ccd3da;display:flex;align-items:center;gap:8px;padding:0 10px;height:0;animation:mkb 8s infinite}.mk-b2 b{font-weight:400;background:#e3e6ea;border-radius:4px;padding:2px 8px}.mk-p3{padding-top:6px}
+@keyframes mkk{0%,16%{background:var(--bg);color:var(--fg);transform:none}20%,40%{background:#2d7a3a;color:#fff;transform:translateY(2px)}44%,100%{background:var(--bg);color:var(--fg);transform:none}}
+@keyframes mkb{0%,44%{height:0}50%,90%{height:30px}96%,100%{height:0}}
+.mk4{height:262px}.mk4 .mk-bar{animation:none}.mk4 .mk-bar b.mk-new{animation:mkk4 14s infinite;opacity:1}
+.mk4 .mk-url{position:relative;height:22px}.mk4 .mk-url span{position:absolute;left:12px;top:3px;white-space:nowrap}.mk4 .u1{animation:sc1 14s infinite}.mk4 .u2{animation:sc2 14s infinite}
+.mk4 .sc1{animation:sc1 14s infinite}.mk4 .sc2{animation:sc2 14s infinite}
+.mk-card{position:absolute;left:40px;top:24px;font-weight:600;font-size:14px}
+.mk-cb{position:absolute;left:40px;top:100px;width:220px;height:28px;background:#0071b5;color:#fff;border-radius:999px;font-weight:600;animation:mkcb 14s infinite}.mk-cb span{position:absolute;inset:0;display:grid;place-items:center}.lbA{animation:lba 14s infinite}.lbB{animation:lbb 14s infinite}
+.lab{position:absolute;font-size:10px;color:#667}.bx{position:absolute;height:20px;background:#fff;border:1px solid #cfd5db;border-radius:3px}.bx.g{background:#e9ecef}.bx .fl{position:absolute;left:6px;top:2px}
+.fr{position:absolute;left:0;right:0;height:20px}.fr span{position:absolute;top:3px}.fl{opacity:0}
+.mk-toast{position:absolute;right:14px;bottom:8px;background:#2d7a3a;color:#fff;padding:6px 12px;border-radius:8px;font-weight:600}
+.mk4c{animation:mkc4 14s infinite}
+@keyframes sc1{0%,26%{opacity:1}30%,96%{opacity:0}100%{opacity:1}}@keyframes sc2{0%,26%{opacity:0}30%,96%{opacity:1}100%{opacity:0}}
+@keyframes lba{0%,13%{opacity:1}15%,98%{opacity:0}100%{opacity:1}}@keyframes lbb{0%,13%{opacity:0}15%,28%{opacity:1}32%,100%{opacity:0}}
+@keyframes mkcb{0%,12%{transform:none}14%{transform:scale(.95)}16%,100%{transform:none}}
+@keyframes mkc4{0%{transform:translate(60px,225px)}10%,22%{transform:translate(120px,178px)}46%,54%{transform:translate(205px,50px)}64%,100%{transform:translate(60px,225px)}}
+@keyframes mkk4{0%,46%{box-shadow:none;transform:none}48%{transform:scale(.9)}52%,58%{box-shadow:0 0 0 3px #9ccfa8;transform:none}62%,100%{box-shadow:none;transform:none}}
+@keyframes f1{0%,56%{opacity:0}58%,92%{opacity:1}96%,100%{opacity:0}}.f1{animation:f1 14s infinite}@keyframes f2{0%,60%{opacity:0}62%,92%{opacity:1}96%,100%{opacity:0}}.f2{animation:f2 14s infinite}@keyframes f3{0%,64%{opacity:0}66%,92%{opacity:1}96%,100%{opacity:0}}.f3{animation:f3 14s infinite}@keyframes f4{0%,68%{opacity:0}70%,92%{opacity:1}96%,100%{opacity:0}}.f4{animation:f4 14s infinite}@keyframes f5{0%,72%{opacity:0}74%,92%{opacity:1}96%,100%{opacity:0}}.f5{animation:f5 14s infinite}@keyframes f6{0%,76%{opacity:0}78%,92%{opacity:1}96%,100%{opacity:0}}.f6{animation:f6 14s infinite}@keyframes f7{0%,82%{opacity:0}84%,92%{opacity:1}96%,100%{opacity:0}}.f7{animation:f7 14s infinite}
+@media (prefers-reduced-motion:reduce){.keys kbd,.mk-b2,.mk4 *,.mk4c{animation:none!important}.mk-b2{height:30px}.mk4 .sc1,.mk4 .u1,.mk4c{display:none}.mk4 .sc2,.mk4 .u2,.mk4 .fl{opacity:1}}
+
+dialog>button.dl{padding:6px 16px;border:0;border-radius:8px;background:var(--soft);color:var(--ac);font:600 14px "Segoe UI",system-ui,sans-serif;cursor:pointer}dialog{border:0;border-radius:12px;padding:12px;max-width:96vw;background:var(--card);color:var(--fg)}dialog::backdrop{background:rgba(0,0,0,.6)}.big{overflow:auto;max-height:80vh;margin-top:8px}.big img{display:block;width:1200px;max-width:none}
 .mut{color:var(--mut);font-size:13px;margin-top:8px}
 a.dl{display:inline-block;margin-top:8px;padding:7px 14px;border-radius:8px;background:var(--soft);color:var(--ac);font-weight:600;font-size:14px;text-decoration:none}
 .note{background:var(--warn);color:var(--warnf);border-radius:10px;padding:10px 14px;font-size:14px;margin-top:16px}
@@ -67,6 +103,42 @@ a.dl{display:inline-block;margin-top:8px;padding:7px 14px;border-radius:8px;back
 </div>
 <div><div id="totc"></div><div id="res"></div></div>
 </div></div>
+<dialog id="dlg2"><button class="dl" style="margin:0" onclick="this.closest('dialog').close()">Cerrar</button>
+<div class="vid"><h3>Cómo guardar el botón en la barra de marcadores</h3>
+<p>Haz clic sobre el botón verde, <b>no sueltes el ratón</b>, llévalo a la barra y suéltalo allí:</p>
+<div class="mk" aria-hidden="true"><div class="mk-top"><i></i><i></i><i></i><span class="mk-url">www.mi-conservatorio.es/tasas</span></div>
+<div class="mk-bar"><b>Correo</b><b>Moodle</b><b class="mk-new">Rellenar modelo 169</b></div>
+<div class="mk-page"><div class="mk-l"></div><div class="mk-l s"></div><div class="mk-btn">Rellenar modelo 169</div></div>
+<div class="mk-gh">Rellenar modelo 169</div><svg class="mk-cur " width="22" height="22" viewBox="0 0 22 22"><path d="M2 2l15 7-6.5 2L8 18z" fill="#111" stroke="#fff" stroke-width="1.5"/></svg></div>
+<p class="mut">El dibujo se repite solo. Aquí tienes el botón para arrastrarlo: <a class="dl bml" href="#">Rellenar modelo 169</a></p>
+<p class="mut">¿No te deja arrastrarlo? Clic derecho sobre el botón → «Copiar dirección del enlace». Luego clic derecho en la barra de marcadores → «Añadir página» y pega la dirección en «URL».</p></div></dialog>
+<dialog id="dlg3"><button class="dl" style="margin:0" onclick="this.closest('dialog').close()">Cerrar</button>
+<div class="vid"><h3>Cómo mostrar la barra de marcadores</h3>
+<p>Pulsa estas tres teclas <b>a la vez</b> (en Mac: <kbd>Cmd</kbd> + <kbd>Mayús</kbd> + <kbd>B</kbd>):</p>
+<div class="keys" aria-hidden="true"><kbd class="kk">Ctrl</kbd> + <kbd class="kk">Mayús</kbd> + <kbd class="kk">B</kbd></div>
+<div class="mk mk3" aria-hidden="true"><div class="mk-top"><i></i><i></i><i></i><span class="mk-url">www.mi-conservatorio.es</span></div>
+<div class="mk-b2"><b>Correo</b><b>Moodle</b><b>Mi banco</b></div>
+<div class="mk-p3"><div class="mk-l"></div><div class="mk-l s"></div><div class="mk-l"></div></div></div>
+<p class="mut">Aparece una fila bajo la dirección de internet. Para ocultarla, vuelve a pulsar las teclas.</p>
+<p class="mut">Otra forma: menú <b>⋮</b> (arriba a la derecha) → <b>Marcadores</b> (en Edge, <b>Favoritos</b>) → <b>Mostrar barra de marcadores</b>.</p></div></dialog>
+<dialog id="dlg4"><button class="dl" style="margin:0" onclick="this.closest('dialog').close()">Cerrar</button>
+<div class="vid"><h3>Cómo se rellena el modelo 169</h3>
+<div class="mk mk4" aria-hidden="true"><div class="mk-top"><i></i><i></i><i></i><span class="mk-url"><span class="u1">www.mi-conservatorio.es/tasas</span><span class="u2">juntadeandalucia.es/…/modelo169</span></span></div>
+<div class="mk-bar"><b>Correo</b><b>Moodle</b><b class="mk-new">Rellenar modelo 169</b></div>
+<div class="mk-page sc1"><div class="mk-card">Primer pago · 116,00 €</div><div class="mk-cb"><span class="lbA">Copiar datos para el marcador</span><span class="lbB">¡Copiado!</span></div></div>
+<div class="mk-page sc2"><div class="lab" style="left:20px;top:0">Fecha de devengo</div><div class="bx" style="left:20px;top:14px;width:130px"><span class="fl f1">20/10/2026</span></div>
+<div class="lab" style="left:170px;top:0">Código territorial</div><div class="bx" style="left:170px;top:14px;width:110px"><span class="fl f2">ED2104</span></div>
+<div class="lab" style="left:300px;top:0">Concepto de pago</div><div class="bx" style="left:300px;top:14px;width:110px"><span class="fl f3">32EB</span></div>
+<div class="bx" style="left:20px;top:62px;width:250px"></div><div class="bx" style="left:280px;top:62px;width:30px"></div><div class="bx" style="left:320px;top:62px;width:70px"></div><div class="bx g" style="left:400px;top:62px;width:60px"></div>
+<div class="bx" style="left:20px;top:92px;width:250px"></div><div class="bx" style="left:280px;top:92px;width:30px"></div><div class="bx" style="left:320px;top:92px;width:70px"></div><div class="bx g" style="left:400px;top:92px;width:60px"></div>
+<div class="bx" style="left:20px;top:122px;width:250px"></div><div class="bx" style="left:280px;top:122px;width:30px"></div><div class="bx" style="left:320px;top:122px;width:70px"></div><div class="bx g" style="left:400px;top:122px;width:60px"></div>
+<div class="fr fl f4" style="top:62px"><span style="left:26px">APERTURA DE EXPEDIENTE</span><span style="left:290px">1</span><span style="left:326px">21,50</span><span style="left:406px">21,50</span></div>
+<div class="fr fl f5" style="top:92px"><span style="left:26px">SERVICIOS GENERALES</span><span style="left:290px">1</span><span style="left:326px">8,60</span><span style="left:406px">8,60</span></div>
+<div class="fr fl f6" style="top:122px"><span style="left:26px">POR ASIGNATURA EN 1ª MATRÍCULA</span><span style="left:290px">2</span><span style="left:326px">42,95</span><span style="left:406px">85,90</span></div>
+<div class="mk-toast fl f7">Datos cargados. Total: 116,00 €</div></div>
+<svg class="mk-cur mk4c" width="22" height="22" viewBox="0 0 22 22"><path d="M2 2l15 7-6.5 2L8 18z" fill="#111" stroke="#fff" stroke-width="1.5"/></svg></div>
+<ol class="mut" style="font-size:15px"><li>En la web de tasas, pulsa <b>«Copiar datos»</b>.</li><li>Abre el modelo 169.</li><li>Pulsa el marcador <b>«Rellenar modelo 169»</b>: se rellenan solos la fecha, el código, el concepto y las filas.</li><li>Comprueba que el total coincide y envía.</li></ol>
+<p class="mut">El dibujo es un ejemplo: los datos reales dependen de tu curso.</p></div></dialog>
 <dialog id="dlg"><button class="dl" style="margin:0" onclick="this.closest('dialog').close()">Cerrar</button><div class="big"></div></dialog>
 <script>
 const PR=/*PR*/{"ay":"2026-27","ap":2150,"sg":860,"b1":4295,"b2":5157,"p1":5157,"p2":6018,"bon":{"fng":50,"fne":100,"mun":40}}/*END*/;
@@ -126,7 +198,7 @@ async function bm(){
 const bt=v=>'<button type="button" data-v="'+v+'" aria-label="Copiar '+v+'">Copiar</button>';
 function copyHTML(P,i){
   M169[i]=JSON.stringify({v:1,t:TERR,c:CONC,r:P.lines.map(r=>[r[0],r[1],eur(r[2])]),T:eur(P.total)});
-  return '<details class="cp"><summary>Copiar los datos al modelo 169</summary><p><button type="button" data-m="'+i+'" style="margin:0">Copiar datos para el marcador</button> <a class="dl bml" href="#">Rellenar modelo 169</a> <span class="mut">Este botón se guarda en la barra de marcadores: ver instrucciones más abajo.</span></p><p class="mut">En la pestaña «Liquidación» rellena estos campos y pulsa «Añadir» para cada concepto.</p>'+
+  return '<details class="cp"><summary>Copiar los datos al modelo 169</summary><p><button type="button" data-m="'+i+'" style="margin:0">Copiar datos para el marcador</button></p><p class="mut">En la pestaña «Liquidación» rellena estos campos y pulsa «Añadir» para cada concepto.</p>'+
   '<table><tr><td>Código territorial</td><td>'+TERR+bt(TERR)+'</td></tr><tr><td>Concepto de pago</td><td>'+CONC+bt(CONC)+'</td></tr></table>'+
   '<table><tr><th>Nº</th><th>Descripción</th><th>Cant.</th><th>Precio unit.</th></tr>'+
   P.lines.map((r,i)=>'<tr><td>'+(i+1)+'</td><td>'+r[0]+bt(r[0])+'</td><td>'+r[1]+bt(r[1])+'</td><td>'+eur(r[2])+bt(eur(r[2]))+'</td></tr>').join('')+'</table></details>';
@@ -134,7 +206,7 @@ function copyHTML(P,i){
 async function cp(v,b){
   try{await navigator.clipboard.writeText(v)}catch(e){const t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(x){}t.remove()}
   const o=b.textContent;b.textContent='¡Copiado!';setTimeout(()=>b.textContent=o,1500)}
-document.addEventListener('click',e=>{const l=e.target.closest('a.bml');if(l){e.preventDefault();alert('Este botón no se pulsa aquí. Arrástralo con el ratón hasta la barra de marcadores de tu navegador (mira las instrucciones de más abajo). Después, ábrelo desde el modelo 169.');return}const b=e.target.closest('button[data-v],button[data-m]');if(b)cp(b.dataset.m!==undefined?M169[+b.dataset.m]:b.dataset.v,b)});
+document.addEventListener('click',e=>{const vd=e.target.closest('[data-dlg]');if(vd){$(vd.dataset.dlg).showModal();return}const l=e.target.closest('a.bml');if(l){e.preventDefault();alert('Este botón no se pulsa aquí. Arrástralo con el ratón hasta la barra de marcadores de tu navegador (mira las instrucciones de más abajo). Después, ábrelo desde el modelo 169.');return}const b=e.target.closest('button[data-v],button[data-m]');if(b)cp(b.dataset.m!==undefined?M169[+b.dataset.m]:b.dataset.v,b)});
 function draw(P,cap){
   const n=P.lines.length,T=30,Ht=SL.t.height,W=SL.t.width,X=12,y0=T+Ht,H=y0+71+43*n+140+12,c=document.createElement('canvas');
   c.width=W;c.height=H;const x=c.getContext('2d');
@@ -195,22 +267,21 @@ function render(){
     const cv=draw(P,cap+(R.length>1?' · '+nm:''));const w=document.createElement('div');w.className='cw';w.appendChild(cv);d.appendChild(w);cv.tabIndex=0;cv.setAttribute('role','button');cv.setAttribute('aria-label','Ampliar la imagen');const zm=()=>{const b=$('dlg').querySelector('.big');b.innerHTML='';const im=new Image();im.alt='Imagen ampliada';im.src=cv.toDataURL('image/png');b.appendChild(im);$('dlg').showModal()};cv.onclick=zm;cv.onkeydown=e=>{if(e.key==='Enter')zm()};
     const a=document.createElement('a');a.className='dl';a.textContent='Descargar imagen';a.href=cv.toDataURL('image/png');a.download='tasa-'+(R.length>1?'pago'+(i+1):'pago-unico')+'.png';
     d.appendChild(a);d.insertAdjacentHTML('beforeend','<div class="mut">Pulsa la imagen para ampliarla. Si no se descarga, mantenla pulsada (móvil) o clic derecho (ordenador).</div>');d.insertAdjacentHTML('beforeend',copyHTML(P,i));out.appendChild(d)});
+  const bts=R.map((P,i)=>'<button type="button" data-m="'+i+'">'+(R.length>1?(i?'Copiar datos del segundo pago (enero)':'Copiar datos del primer pago'):'Copiar datos para el marcador')+'</button>').join(' ');
   out.insertAdjacentHTML('beforeend',`<div class="pg"><details class="cp"><summary>Rellenar el modelo 169 automáticamente (solo ordenador)</summary>
 <div class="guia">
-<p><b>¿Para qué sirve?</b> Para no tener que escribir los datos a mano en el modelo 169: un botón los rellena por ti. Solo funciona en <b>ordenador</b> (no en móvil ni en tableta). Se prepara <b>una sola vez</b>; después solo hay que pulsar un botón.</p>
-<h4>Preparación (solo la primera vez)</h4>
+<p>Un botón rellena el modelo 169 por ti, sin escribir nada a mano. <b>Solo funciona en ordenador.</b></p>
+<h4>Solo la primera vez</h4>
 <ol>
-<li><b>Muestra la barra de marcadores.</b> Es una fila de accesos directos que va justo debajo de la barra donde se escribe la dirección de internet. Si no la ves, pulsa a la vez las teclas <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>B</kbd> (en Chrome, Edge y Firefox; en un Mac, <kbd>Cmd</kbd> + <kbd>Mayús</kbd> + <kbd>B</kbd>). Otra forma: abre el menú <b>⋮</b> (los tres puntos de arriba a la derecha) → <b>Marcadores</b> (en Edge, <b>Favoritos</b>) → <b>Mostrar barra de marcadores</b>.</li>
-<li><b>Guarda el botón verde en esa barra.</b> Haz clic sobre este botón, no sueltes el ratón, arrástralo hasta la barra de marcadores y suéltalo ahí: <a class="dl bml" href="#">Rellenar modelo 169</a><br><span class="mut">Si no te deja arrastrarlo: clic derecho sobre el botón → «Copiar dirección del enlace». Luego clic derecho en la barra de marcadores → «Añadir página» (o «Añadir favorito»), y pega la dirección en el campo «URL».</span></li>
+<li>Muestra la barra de marcadores: pulsa <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>B</kbd> (en Mac, <kbd>Cmd</kbd> + <kbd>Mayús</kbd> + <kbd>B</kbd>). <button type="button" data-dlg="dlg3">▶ Ver cómo se hace</button></li>
+<li>Arrastra este botón hasta esa barra: <a class="dl bml" href="#">Rellenar modelo 169</a> <button type="button" data-dlg="dlg2">▶ Ver cómo se hace</button></li>
 </ol>
-<h4>Cada vez que vayas a pagar</h4>
+<h4>Cada vez que pagues</h4>
 <ol start="3">
-<li>En esta página, abre el desplegable «Copiar los datos al modelo 169» del pago que vas a hacer y pulsa <b>«Copiar datos para el marcador»</b>.</li>
-<li>Abre el <a href="https://www.juntadeandalucia.es/economiayhacienda/apl/surweb/modelos/modelo169/169.jsp" target="_blank" rel="noopener">modelo 169</a> y haz clic en el marcador <b>«Rellenar modelo 169»</b> de la barra.</li>
-<li>Si el navegador te pregunta si permite ver lo copiado, pulsa <b>Permitir</b>. Si en su lugar sale una cajita pidiendo pegar, pulsa <kbd>Ctrl</kbd> + <kbd>V</kbd> y luego <b>Aceptar</b>.</li>
-<li>Saldrá un aviso con el total. <b>Comprueba que coincide con el de esta página</b> y que los datos son los de la imagen. Después completa tus datos personales y envía el modelo como siempre.</li>
+<li>Copia los datos: ${bts}</li>
+<li>Abre el <a href="https://www.juntadeandalucia.es/economiayhacienda/apl/surweb/modelos/modelo169/169.jsp" target="_blank" rel="noopener">modelo 169</a> y pulsa el marcador «Rellenar modelo 169». <button type="button" data-dlg="dlg4">▶ Ver cómo se hace</button></li>
+<li>Si el navegador pregunta, pulsa <b>Permitir</b>. Comprueba que el total coincide y envía.</li>
 </ol>
-<p class="mut">Si algo no funciona, no pasa nada: puedes usar los botones «Copiar» de uno en uno.</p>
 </div></details></div>`);
   document.querySelectorAll('.bml').forEach(a=>a.href='javascript:('+encodeURIComponent(bm.toString())+')()');
 }
